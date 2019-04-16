@@ -1,1 +1,216 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Toro Kernel - a dedicated kernel for microservices</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Getting Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://torokerneleng.blogspot.com/">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/torokernel/torokernel/wiki">Wiki</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="my-4">
+      <h1 class="display-1">Toro Kernel</h1>
+      <p class="lead">Leverage cloud infrastructure by using a dedicated (uni)kernel to develop and run microservices</p>
+      <a href="http://github.com/torokernel/torokernel" class="btn btn-primary btn-lg">View on Github</a>
+    </header>
+
+    <!-- Page Features -->
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">Fast Instantiation</h4>
+            <p class="card-text">Toro takes 150ms to boot up. It is thus possible to start microservices on demand or to reboot them if something happens.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">Reduced footprint</h4>
+            <p class="card-text"> A simple microservice within the kernel takes about 130kb on disk. In addition, Toro can work with less than 4Mb of physical memory. This results in more instances with fewer resources.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">VirtIO-based</h4>
+            <p class="card-text">Toro leverages on VirtIO interface for networking and filesystems. This avoids the use of emulating devices thus speeding up IO.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title">Immutable</h4>
+            <p class="card-text">Compiles once and deploy everywhere. Once the binary is generated, it can be used without any changes in any hypervisor thus reducing the maintenance time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>What is?</h2>
+        <hr>
+        <p>Toro is a simple kernel that provides a dedicated API to develop microservices. We propose two kinds of sockets to build microservices: blocking and non-blocking. Blocking sockets are good for intensive-IO microservices whereas Non-blocking sockets are good for microservices that can answer a request without blocking. When a microservice executes in Toro, it runs alone in the system thus leveraging on the VM's resources.</p>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+		<a href="./images/toroandmicro.png"><img class="card-img-top" src="./images/toroandgpos.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>How works?</h2>
+        <hr>
+        <p>Toro is a set of libraries that compile within the user application, i.e., the microservice. During development, the user can choose which component should be includes, .e.g, drivers, filesystems, etc. This results in a binary that can run on top of modern hypervisors like KVM, Xen or VirtualBox. Once the kernel has been initialized, the microservice starts to execute. The microservice and the kernel execute at the most privileged level and share the memory space, i.e., flat memory model. In this sense, Toro only supports threads and does not use paging.</p>
+      </div>
+      <div class="col-md-4 mb-5">
+       <div class="card h-100">
+          <div class="card-body">
+       <a href="./images/toroandmicro.png"><img class="card-img-top" src="./images/toroandmicro.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Supported Hypervisors</h2>
+              <hr>
+      <p>Toro is able to run both baremetal and as a guest. Currently, Toro has been successfully tested on Qemu-KVM, Xen, VirtualBox and HyperV. Recently, Toro has been tested on Firecraker and NEMU. These solutions propose an optimized Virtual Machine Monitor (VMM) that simplifies the device model among other features.</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Supported Cloud Providers</h2>
+              <hr>
+      <p><ul>
+
+
+           <li><a href="https://github.com/torokernel/torokernel/wiki/How-to-run-an-Instance-of-Toro-in-Google-Compute-Engine">Try Toro in Google Cloud Engine</a>
+
+
+
+         </ul>
+         </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Recent Posts</h2>
+        <hr>
+<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Ftorokerneleng.blogspot.com%2Ffeeds%2Fposts%2Fdefault&num=4&desc=100&au=y&utf=y"  charset="UTF-8" type="text/javascript"></script>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Getting Started</h2>
+        <hr>
+        <p>Toro is hosted in <a href="http://github.com/torokernel/">Github</a> and includes several examples that can be used as a starting point for your projects. The repository includes the following examples:</p>
+	<ul>
+        <li><a href="https://github.com/torokernel/torokernel/tree/master/examples/HelloWorldMicroservice/">Hello World microservice</a>
+        <li><a href="https://github.com/torokernel/torokernel/tree/master/examples/StaticWebServer/">Static WebServer</a>
+	<li><a href="https://github.com/torokernel/torokernel/tree/master/examples/WebSocketServer/">WebSockets Votation System</a>
+        </ul>
+	<p>The examples include instructions to build and execute them. You can find these instructions in the README.md located in each example. In Linux, to compile and deploy the examples, you need to install qemu-kvm and Lazarus. To install them, execute:</p>
+	<p><code>apt-get install lazarus</code></p>
+        <p><code>sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils virtinst</code></p>
+      
+		<p>If you are in Windows, please follow the instructions <a href="https://github.com/torokernel/torokernel/wiki/My-first-three-applications-in-Toro">here</a>.</p>
+    </div>
+    </div>
+
+
+
+
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>How to Contribute</h2>
+              <hr>
+      <p>We are always keen to hear about improvements and bugs. To report an issue, please follow <a href="https://github.com/torokernel/torokernel/wiki/How-to-Contribute">this</a> guideline. If you want to help in the development, you can pick up any of the issues from <a href="https://github.com/torokernel/torokernel/issues">here</a>. If you do not know what to pick, do not hesitate to ask! tickets labeled as help wanted may be a good start.</p>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; ToroKernel 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
