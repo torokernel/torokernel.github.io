@@ -35,6 +35,9 @@
             <a class="nav-link" href="http://torokerneleng.blogspot.com/">Blog</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/torokernel/">Twitter</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="https://github.com/torokernel/torokernel/wiki">Wiki</a>
           </li>
         </ul>
@@ -100,12 +103,12 @@
       <div class="col-md-8 mb-5">
         <h2>What is?</h2>
         <hr>
-        <p>Toro is a simple kernel that provides a dedicated API to develop microservices. We propose two kinds of sockets to build microservices: blocking and non-blocking. Blocking sockets are good for intensive-IO microservices whereas Non-blocking sockets are good for microservices that can answer a request without blocking. When a microservice executes in Toro, it runs alone in the system thus leveraging on the VM's resources.</p>
+        <p>Toro is a simple kernel that provides a dedicated API to develop microservices. We propose two kinds of sockets to build microservices: blocking and non-blocking. Blocking sockets are good for intensive-IO microservices whereas non-blocking sockets are good for microservices that can serve a request without blocking. When a microservice executes in Toro, it runs alone in the system thus leveraging on the VM's resources.</p>
       </div>
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-		<a href="./images/toroandmicro.png"><img class="card-img-top" src="./images/toroandgpos.png" alt=""></a>
+		<a href="./images/toroandgpos.png"><img class="card-img-top" src="./images/toroandgpos.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -116,12 +119,12 @@
       <div class="col-md-8 mb-5">
         <h2>How works?</h2>
         <hr>
-        <p>Toro is a set of libraries that compile within the user application, i.e., the microservice. During development, the user can choose which component should be includes, .e.g, drivers, filesystems, etc. This results in a binary that can run on top of modern hypervisors like KVM, Xen or VirtualBox. Once the kernel has been initialized, the microservice starts to execute. The microservice and the kernel execute at the most privileged level and share the memory space, i.e., flat memory model. In this sense, Toro only supports threads and does not use paging.</p>
+        <p>Toro is a set of libraries that compile within the user application, i.e., the microservice. The user can choose which components should be included, .e.g, drivers, filesystems, etc. This results in a binary that can run on top of modern hypervisors like KVM, Xen or VirtualBox. Once the kernel has been initialized, the microservice starts to execute. The microservice and the kernel execute at the most privileged level and share the memory space, i.e., flat memory model. In this sense, Toro only supports threads and does not use paging.</p>
       </div>
       <div class="col-md-4 mb-5">
        <div class="card h-100">
           <div class="card-body">
-       <a href="./images/toroandmicro.png"><img class="card-img-top" src="./images/toroandmicro.png" alt=""></a>
+       <a href="./images/apporikernel.png"><img class="card-img-top" src="./images/apporikernel.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -132,7 +135,7 @@
       <div class="col-md-8 mb-5">
         <h2>Supported Hypervisors</h2>
               <hr>
-      <p>Toro is able to run both baremetal and as a guest. Currently, Toro has been successfully tested on Qemu-KVM, Xen, VirtualBox and HyperV. Recently, Toro has been tested on Firecraker and NEMU. These solutions propose an optimized Virtual Machine Monitor (VMM) that simplifies the device model among other features.</p>
+      <p>Toro is able to run as a guest or baremetal. Currently, it  has been successfully tested on Qemu-KVM, Xen, VirtualBox and HyperV. Recently, Toro has been tested on Firecraker and NEMU. These solutions propose an optimized Virtual Machine Monitor (VMM) that simplifies the device model among other features.</p>
       </div>
     </div>
 
@@ -186,9 +189,9 @@
 
     <div class="row">
       <div class="col-md-8 mb-5">
-        <h2>How to Contribute</h2>
+        <h2>How contributes?</h2>
               <hr>
-      <p>We are always keen to hear about improvements and bugs. To report an issue, please follow <a href="https://github.com/torokernel/torokernel/wiki/How-to-Contribute">this</a> guideline. If you want to help in the development, you can pick up any of the issues from <a href="https://github.com/torokernel/torokernel/issues">here</a>. If you do not know what to pick, do not hesitate to ask! tickets labeled as help wanted may be a good start.</p>
+      <p>We are always looking forward for improvements and fixes. To report an issue, please follow <a href="https://github.com/torokernel/torokernel/wiki/How-to-Contribute">this</a> guideline. If you want to help in the development, you can pick up any of the issues from <a href="https://github.com/torokernel/torokernel/issues">here</a>. If you do not know what to pick, do not hesitate to ask! tickets labeled as help wanted may be a good start.</p>
       </div>
     </div>
 
