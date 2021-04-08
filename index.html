@@ -31,6 +31,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#GetStart">Getting Started</a>
           </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="https://github.com/torokernel/">Github</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="https://www.youtube.com/channel/UCWuz3Cez_kWmq1x52CWIR4g">Youtube</a>
           </li>
@@ -101,6 +104,8 @@
           </div>
         </div>
       </div>
+	  
+	  
     </div>
     <!-- /.row -->
 
@@ -126,7 +131,8 @@
       <div class="col-md-8 mb-5">
         <h2>How it works?</h2>
         <hr>
-        <p>Toro is a set of libraries that compile within the user application, i.e., the microservice. The user can choose which components should be included, .e.g, drivers, filesystems, etc. This results in a binary that can run on top of modern hypervisors like KVM, Xen or VirtualBox. Once the kernel has been initialized, the microservice starts to execute. The microservice and the kernel execute at the most privileged level and share the memory space, i.e., flat memory model. In this sense, Toro only supports threads and does not use paging.</p>
+        <p>Toro is a set of libraries that compile within the user application, i.e., the microservice. The user can choose which components are included, .e.g, drivers, filesystems, networking, etc. This results in a binary that can run on top of modern hypervisors like KVM, Xen or VirtualBox. Once the kernel has been initialized, the microservice starts to execute. The microservice runs free from interference from other applications and without the need of users, password or remote login.
+		</p>
       </div>
       <div class="col-md-4 mb-5">
        <div class="card h-100">
@@ -161,6 +167,14 @@
       </div>
     </div>
 	
+		<div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>Reducing CPU usage of a Toro Appliance</h2>
+        <hr>
+    	<iframe width="560" height="315" src="https://www.youtube.com/embed/aKUrUCwCyY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+    </div>
+
     <div class="row">
       <div class="col-md-8 mb-5">
         <h2>Supported Hypervisors</h2>
@@ -200,33 +214,22 @@
       <div class="col-md-8 mb-5">
         <h2 id="GetStart">Getting Started</h2>
         <hr>
-        <p>Toro is hosted in <a href="http://github.com/torokernel/">Github</a> and includes several examples that can be used as a starting point for your projects. The repository includes the following examples:</p>
-	<ul>
-        <li><a href="https://github.com/torokernel/torokernel/tree/master/examples/HelloWorldMicroservice/">Hello World microservice</a>
-        <li><a href="https://github.com/torokernel/torokernel/tree/master/examples/StaticWebServer/">Static WebServer</a>
-	<li><a href="https://github.com/torokernel/torokernel/tree/master/examples/WebSocketServer/">WebSockets Votation System</a>
-        </ul>
-	<p>The examples include instructions to build and execute them. You can find these instructions in the README.md located in each example. In Linux, to compile and deploy the examples, you need to install qemu-kvm and Lazarus. To install them, execute:</p>
-	<p><code>apt-get install lazarus</code></p>
-        <p><code>sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils virtinst</code></p>
-      
-		<p>If you are in Windows, please follow the instructions <a href="https://github.com/torokernel/torokernel/wiki/My-first-three-applications-in-Toro">here</a>.</p>
-    </div>
+        <p>Toro is hosted in <a href="http://github.com/torokernel/">Github</a> and includes several examples that can be used as a starting point for your projects. The examples include instructions to build and execute them. You can find these instructions <a href="http://github.com/torokernel/torokernel/blob/master/README.md">here</a>.</p>
+	 </div>
     </div>
 
     <div class="row">
       <div class="col-md-8 mb-5">
         <h2>How can you contribute?</h2>
               <hr>
-      <p>We are always looking forward for improvements and fixes. To report an issue, please follow <a href="https://github.com/torokernel/torokernel/wiki/How-to-Contribute">this</a> guideline. If you want to help in the development, you can pick up any of the issues from <a href="https://github.com/torokernel/torokernel/issues">here</a>. If you do not know what to pick, do not hesitate to ask! tickets labeled as help wanted may be a good start.</p>
+      <p>There are plenty room for improvements! To report an issue or propose a feature, please follow <a href="https://github.com/torokernel/torokernel/wiki/How-to-Contribute">this</a> guideline. If you want to help in the development, you can pick up any of the issues from <a href="https://github.com/torokernel/torokernel/issues">here</a>. If you do not know what to pick, do not hesitate to ask! tickets labeled as help wanted may be a good start.</p>
       </div>
     </div>
 
 	<div class="row">
       <div class="col-md-8 mb-5">
-        <h2>Donations</h2>
+        <h2>Donations by using BTC</h2>
               <hr>
-			  <p>Send donations to this BTC address</p>
 			  <img src="./images/btcaddr.png" alt="BTC Address">
        </div>
     </div>
